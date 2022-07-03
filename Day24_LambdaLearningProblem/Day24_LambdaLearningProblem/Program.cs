@@ -23,12 +23,31 @@
             {
                 Console.WriteLine("Name:" + person.Name + "\t\tAge:" + person.Age);
             }
+            Console.WriteLine("------------------------------------------------------------------------");
             //uc3
+            Console.WriteLine("\n______________________________________");
             Console.WriteLine("checking for the teenagers in the city");
             foreach (Person person in listPersonInCity.FindAll(e => (e.Age >= 13 && e.Age <= 18)))
             {
                 Console.WriteLine("Name:" + person.Name + "\t\tAge:" + person.Age);
             }
+            Console.WriteLine("------------------------------------------------------------------------");
+            //UC-4
+            Console.WriteLine("\n______________________________________");
+            Console.WriteLine("Getting Average Of All The Person's Age: ");
+            double averageAge = listPersonInCity.Average(e => e.Age);
+            {
+                Console.WriteLine("The Average Of All The Person's Age Is: {0}", averageAge);
+            }
+            Console.WriteLine("------------------------------------------------------------------------");
+            //uc5
+            Console.WriteLine("\n______________________________________");
+            Console.WriteLine("checking wheather perosn name present in the list");
+            foreach (Person person in listPersonInCity.FindAll(e => e.Name == "anjan"))
+            {
+                Console.WriteLine("Yes,Name exist in your list");
+            }
+            Console.WriteLine("________________________________________________________________________");
         }
     }
 }

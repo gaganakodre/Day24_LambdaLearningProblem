@@ -23,6 +23,12 @@
             {
                 Console.WriteLine("Name:" + person.Name + "\t\tAge:" + person.Age);
             }
+            //uc3
+            Console.WriteLine("checking for the teenagers in the city");
+            foreach (Person person in listPersonInCity.FindAll(e => (e.Age >= 13 && e.Age <= 18)))
+            {
+                Console.WriteLine("Name:" + person.Name + "\t\tAge:" + person.Age);
+            }
         }
     }
 }

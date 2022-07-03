@@ -56,6 +56,15 @@
                 Console.WriteLine("Name:" + person.Name + "\t\tAge:" + person.Age);
             }
             Console.WriteLine("------------------------------------------------------------------------");
+            //UC7
+            Console.WriteLine("\n______________________________________");
+            Console.WriteLine("\nremoving the person from the list");
+            listPersonInCity.RemoveAll(e => (e.Name == "anjan"));
+            if (listPersonInCity.TrueForAll(e => e.Name != "anjan"))
+            {
+                Console.WriteLine("no person with that name ");
+            }
+            Console.WriteLine("------------------------------------------------------------------------");
         }
     }
 }

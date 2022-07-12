@@ -19,7 +19,7 @@
             //uc2
             Console.WriteLine("\n______________________________________");
             Console.WriteLine("Retriving top 2 aged persons from the list who are below 60 years");
-            foreach (Person person in listPersonInCity.FindAll(e => (e.Age <= 60)).Take(2).ToList())
+            foreach (Person person in listPersonInCity.FindAll(e => (e.Age <= 60)).Take(2).ToList())//this will stote the result of the take(2)method
             {
                 Console.WriteLine("Name:" + person.Name + "\t\tAge:" + person.Age);
             }
@@ -35,7 +35,9 @@
             //UC-4
             Console.WriteLine("\n______________________________________");
             Console.WriteLine("Getting Average Of All The Person's Age: ");
-            double averageAge = listPersonInCity.Average(e => e.Age);
+            double averageAge = listPersonInCity.Average(e => e.Age);//here we are using the
+                                                                     //method which will find
+            //the average of all the ages in enumerable class
             {
                 Console.WriteLine("The Average Of All The Person's Age Is: {0}", averageAge);
             }

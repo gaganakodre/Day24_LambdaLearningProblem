@@ -3,7 +3,7 @@
     class Program
     {
         public static void Main(string[] args)
-        {
+        {//here we are createing a list which is of person type
             //uc1
             List<Person> listPersonInCity = new List<Person>();
             listPersonInCity.Add(new Person("2345671", "anu", "1st cross 8th main BNG", 55));
@@ -19,7 +19,9 @@
             //uc2
             Console.WriteLine("\n______________________________________");
             Console.WriteLine("Retriving top 2 aged persons from the list who are below 60 years");
-            foreach (Person person in listPersonInCity.FindAll(e => (e.Age <= 60)).Take(2).ToList())//this will stote the result of the take(2)method
+            foreach (Person person in listPersonInCity.FindAll(e => (e.Age <= 60)).Take(2).ToList())//this will store the result of the take(2)method
+               // it will return the boolean value but this lamba fuction will not go in any order
+               // buz for example here we top 2 to be displayed
             {
                 Console.WriteLine("Name:" + person.Name + "\t\tAge:" + person.Age);
             }
@@ -35,7 +37,7 @@
             //UC-4
             Console.WriteLine("\n______________________________________");
             Console.WriteLine("Getting Average Of All The Person's Age: ");
-            double averageAge = listPersonInCity.Average(e => e.Age);//here we are using the
+            double averageAge = listPersonInCity.Average(e => e.Age);//here we are using the average
                                                                      //method which will find
             //the average of all the ages in enumerable class
             {
@@ -52,7 +54,7 @@
             Console.WriteLine("________________________________________________________________________");
             //uc6
             Console.WriteLine("\n______________________________________");
-            Console.WriteLine("\nSkkiping every persons whose aged is less than 60 years");
+            Console.WriteLine("\nSkkiping every persons whose aged is more than 60 years");
             foreach (Person person in listPersonInCity.FindAll(e => e.Age < 60))
             {
                 Console.WriteLine("Name:" + person.Name + "\t\tAge:" + person.Age);
